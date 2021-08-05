@@ -38,7 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'todos'
+    'todos',
+
+
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -71,7 +74,11 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'config.wsgi.application'
 
-
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES' : [
+        'rest_framework.permissions.AllowAny',
+    ]
+}
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
